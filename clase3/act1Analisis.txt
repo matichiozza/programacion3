@@ -1,0 +1,5 @@
+1.	Caso Base: Si hay un solo cliente, se devuelve ese cliente en tiempo constante O(1)
+2.	División: El problema se divide en dos subproblemas de tamaño aproximadamente n/2
+3.	Conquista y Combinación: Se llama recursivamente al método en ambas mitades y se compara el máximo de cada mitad, también en tiempo constante O(1)
+Conclusión
+El tiempo de ejecución es lineal respecto al número de clientes porque el árbol de recursión tiene una profundidad de log^2(n) y en cada nivel se realizan comparaciones en tiempo constante. Por lo tanto, la complejidad total del algoritmo es O(n).
