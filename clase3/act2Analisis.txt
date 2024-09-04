@@ -1,0 +1,21 @@
+1. Caso Base:
+Caso base con un solo número (fin - inicio == 1): El algoritmo simplemente devuelve ese número y el valor mínimo posible (Integer.MIN_VALUE). Este paso se realiza en tiempo constante O(1).
+
+Caso base con dos números (fin - inicio == 2): Compara los dos números y devuelve el mayor y el menor. También se realiza en tiempo constante O(1).
+
+2. División:
+El problema se divide en dos subproblemas de tamaño aproximadamente n/2 cada uno. Esto ocurre en el paso recursivo donde el problema se divide en dos partes iguales:
+int mitad = (inicio + fin) / 2;
+Resultados izq = encontrarDosMayores(numeros, inicio, mitad);
+Resultados der = encontrarDosMayores(numeros, mitad, fin);
+
+3. Conquista y Combinación:
+Conquista: Se realiza recursivamente sobre cada mitad de la lista, encontrando los dos números mayores en cada una de ellas.
+
+Combinación: Después de obtener los resultados de las dos mitades, se combinan para determinar los dos números mayores globales en la función combinarResultados. Este paso también se realiza en tiempo constante O(1).
+
+Conclusión
+
+En cada nivel del árbol de recursión se hace un trabajo O(n) debido a la combinación de resultados.
+La profundidad del árbol es O(log n), ya que el problema se divide en dos partes iguales en cada nivel.
+Por lo tanto, el tiempo total de ejecución es O(n log n) debido al trabajo lineal en cada nivel de profundidad logarítmica.
