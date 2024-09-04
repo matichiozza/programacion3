@@ -1,0 +1,14 @@
+Ordenación:
+
+La ordenación de los comprobantes tiene una complejidad de O(n log n), donde n es el número de comprobantes.
+Iteración sobre los Comprobantes:
+
+La iteración para restar el monto y agregar comprobantes a la lista tiene una complejidad de O(n * m), donde n es el número de comprobantes y m es el valor total del monto a reducir. En el peor caso, el monto total puede ser mucho mayor que el número de comprobantes, pero en general, se trata de un proceso que depende tanto de n como del monto.
+Espacio Adicional:
+
+Se utiliza un espacio adicional para almacenar la lista de comprobantes utilizados, que puede tener hasta el tamaño del monto dividido por el valor mínimo de los comprobantes. Por lo tanto, el espacio adicional es O(m / v_min), donde v_min es el valor mínimo de los comprobantes.
+Conclusión
+La complejidad total del algoritmo se puede desglosar como sigue:
+
+Tiempo: O(n log n) para la ordenación más O(n * m) para la iteración y reducción del monto. Sin embargo, en la práctica, la complejidad de la iteración es más relevante porque el proceso de ordenación es generalmente un paso de menor impacto comparado con la iteración para manejar grandes montos.
+Espacio: O(m / v_min) para almacenar los comprobantes utilizados.
