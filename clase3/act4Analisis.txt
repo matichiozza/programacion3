@@ -1,0 +1,27 @@
+1. Caso Base:
+Caso base con una sublista de tamaño menor o igual a n (fin - inicio <= n):
+
+Se toma una sublista de tamaño menor o igual a n.
+Se ordena la sublista en orden descendente, lo cual toma tiempo O(m log m), donde m es el tamaño de la sublista.
+Luego, se seleccionan los primeros n elementos de la sublista, que es un paso que toma tiempo constante O(n).
+El tiempo total en el caso base es O(m log m), donde m puede ser hasta igual al tamaño total de la lista, n, así que el tiempo es O(n log n).
+
+2. Division:
+Division de la lista en dos mitades:
+La lista se divide en dos mitades de tamaño aproximadamente n/2. Esto se hace en tiempo constante O(1).
+3. Conquista y Combinacion:
+Conquista:
+
+Se aplica recursivamente la función en ambas mitades de la lista. Cada llamada recursiva puede ser vista como dividiendo el problema en dos mitades más pequeñas.
+Combinacion:
+
+Después de obtener los n elementos más grandes de las dos mitades, se combinan las dos listas.
+La combinacion incluye agregar los elementos de las dos listas y luego ordenar la lista combinada para encontrar los n elementos más grandes.
+La combinacion toma tiempo O(m log m), donde m es el tamaño combinado de las dos listas (aproximadamente 2 * n, pero más generalmente se puede ver como el tamaño de las listas combinadas).
+
+Conclusión
+El tiempo total de ejecución del algoritmo es la combinación del tiempo en cada nivel de la recursión multiplicado por el número de niveles. En cada nivel, el trabajo es O(n log n) y hay O(log n) niveles.
+
+Por lo tanto, el tiempo total de ejecución es:
+
+O(n log n * log n) = O(n log^2 n)
