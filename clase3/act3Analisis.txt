@@ -1,0 +1,23 @@
+1. Caso Base:
+Caso base con un solo cliente (fin - inicio == 1): Se devuelve el cliente y un valor nulo (null) para el segundo máximo. Esto se realiza en tiempo constante O(1).
+
+Caso base con dos clientes (fin - inicio == 2): Se comparan los dos clientes y se devuelve el cliente con el mayor scoring como el primero, y el otro como el segundo. También se realiza en tiempo constante O(1).
+
+2. División:
+El problema se divide en dos subproblemas de tamaño aproximadamente n/2 cada uno. Esto ocurre en el paso recursivo donde el problema se divide en dos mitades:
+int mitad = (inicio + fin) / 2;
+Resultados izq = encontrarDosClientesMaximos(clientes, inicio, mitad);
+Resultados der = encontrarDosClientesMaximos(clientes, mitad, fin);
+3. Conquista y Combinación:
+Conquista: Se realiza recursivamente en cada mitad de la lista, encontrando los dos clientes con los valores máximos en cada mitad.
+
+Combinación: Después de obtener los resultados de las dos mitades, se combinan para determinar los dos clientes con los valores máximos globales en la función combinarResultados. Este paso también se realiza en tiempo constante O(1).
+
+Conclusión
+La complejidad del algoritmo se puede expresar como sigue:
+
+En cada nivel del árbol de recursión, se realiza un trabajo O(n) debido a la combinación de resultados, pero esto se distribuye a lo largo de todos los niveles del árbol.
+
+La profundidad del árbol es O(log n), ya que el problema se divide en dos partes iguales en cada nivel.
+
+Por lo tanto, el tiempo total de ejecución es O(n log n) debido al trabajo en cada nivel multiplicado por la profundidad logarítmica del árbol de recursión.
