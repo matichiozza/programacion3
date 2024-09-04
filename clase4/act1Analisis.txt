@@ -1,0 +1,16 @@
+Ordenación:
+
+La ordenación de la lista de monedas tiene una complejidad de O(n log n), donde n es el número de monedas.
+Iteración sobre las Monedas:
+
+La iteración a través de la lista para restar las monedas del monto objetivo es O(n), ya que se revisa cada moneda una vez.
+Espacio Adicional:
+
+Se utiliza un espacio adicional para almacenar la lista de monedas, lo cual es O(n).
+Conclusión
+La complejidad total del algoritmo es determinada por el paso de ordenación, que es O(n log n). La iteración posterior para calcular el cambio es lineal, O(n), pero esto no cambia la complejidad total, que está dominada por la ordenación.
+
+Por lo tanto, la complejidad algorítmica total del método tieneCambio es:
+
+Tiempo: O(n log n) debido a la ordenación.
+Espacio: O(n) debido a la creación de la ArrayList adicional.
