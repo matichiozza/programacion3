@@ -39,7 +39,6 @@ public class act1 {
     public static void main(String[] args) {
         act1 tree = new act1();
 
-        // Crear un árbol de ejemplo
         TreeNode root = new TreeNode(10);
         root.left = new TreeNode(5);
         root.right = new TreeNode(20);
