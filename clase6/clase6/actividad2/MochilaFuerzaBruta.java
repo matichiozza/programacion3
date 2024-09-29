@@ -21,7 +21,6 @@ public class MochilaFuerzaBruta {
         int capacidadMochila = 10;
         Resultado mejorResultado = encontrarMejorCombinacion(objetos, capacidadMochila);
 
-        // Mostrar el resultado
         System.out.println("Valor máximo (Fuerza Bruta): " + mejorResultado.valorMaximo);
         System.out.println("Peso total: " + mejorResultado.pesoTotal);
     }
