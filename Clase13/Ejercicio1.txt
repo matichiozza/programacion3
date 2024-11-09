@@ -1,0 +1,40 @@
+Escenario conceptual: Imagina que estás diseñando un sistema de detección de ciberataques para proteger una plataforma web. Este sistema debe identificar posibles acciones maliciosas que un atacante pueda intentar realizar sobre la plataforma.
+1. Ejemplos de acciones posibles del atacante:
+Inyección SQL: Un atacante intenta manipular las consultas de la base de datos enviando código SQL malicioso, lo que podría permitirle acceder, modificar o eliminar datos.
+Ataque de Denegación de Servicio Distribuido (DDoS): Se envía una gran cantidad de tráfico al servidor para sobrecargarlo y hacer que deje de funcionar para los usuarios legítimos.
+Cross-Site Scripting (XSS): Inyección de scripts maliciosos en las páginas web, lo que permite al atacante ejecutar código en los navegadores de los usuarios y potencialmente robar información sensible.
+Ataques de fuerza bruta: El atacante prueba múltiples combinaciones de usuario y contraseña para intentar acceder al sistema.
+Phishing: Intento de engañar a los usuarios para que revelen información sensible a través de páginas falsas o correos electrónicos maliciosos.
+2. Funciones del sistema de detección de ataques y herramientas utilizadas:
+Monitoreo en tiempo real: Vigilar constantemente el tráfico y la actividad en el sistema para detectar patrones inusuales o sospechosos.
+Análisis de comportamiento: Identificar actividades que se desvían del comportamiento normal de los usuarios, como intentos de acceso repetidos o picos de tráfico en momentos inusuales.
+Generación de alertas: Notificar al equipo de seguridad o al administrador del sistema cuando se detecten actividades sospechosas.
+Respuesta automatizada: Acciones automáticas como bloquear la dirección IP del atacante, redirigir el tráfico sospechoso, o aumentar los controles de seguridad en tiempo real.
+Herramientas utilizadas:
+Sistemas de Detección de Intrusiones (IDS): Herramientas como Snort o Suricata que analizan el tráfico y detectan patrones de ataques conocidos.
+Cortafuegos (Firewall): Controla el acceso al sistema permitiendo solo tráfico legítimo.
+Machine Learning (Aprendizaje Automático): Algoritmos que aprenden de los patrones de ataque anteriores para identificar nuevas amenazas de forma proactiva.
+Análisis de registros (logs): Monitoreo de los registros de actividad para rastrear intentos de ataque y tomar acciones preventivas.
+3. Aplicación de la poda alfa-beta
+La poda alfa-beta es una técnica utilizada principalmente en inteligencia artificial y algoritmos de búsqueda para reducir el número de nodos que se evalúan en un árbol de decisiones. En este contexto, podemos aplicar la poda alfa-beta para optimizar el proceso de decisión en el sistema de detección, enfocándonos en los vectores de ataque más probables y eliminando aquellas ramas (acciones o decisiones) que no aportan significativamente al resultado final.
+Por ejemplo:
+Árbol de decisión: Suponiendo que el sistema tiene varios caminos de respuesta ante un ataque (bloquear IP, alertar, monitorear más de cerca, etc.), la poda alfa-beta permite ignorar aquellos caminos o decisiones que no cambiarían el resultado final de la evaluación.
+Ventaja: Esto permite una detección y respuesta más rápida, ya que se evita procesar información redundante, y el sistema se enfoca en las amenazas más relevantes.
+4. Construcción de un árbol de decisión simplificado
+Un árbol de decisión para un sistema de detección de ciberataques podría estructurarse de la siguiente manera:
+Nodo raíz: Detección de tráfico sospechoso
+├── Caso: Tráfico masivo en poco tiempo (posible DDoS)
+│   ├── Acción: Bloquear IP y notificar
+│   └── Revisión: Monitorear si el tráfico continúa después de bloquear
+├── Caso: Intentos de acceso repetidos (fuerza bruta)
+│   ├── Acción: Limitar intentos de inicio de sesión y notificar
+│   └── Revisión: Aumentar verificación de autenticación (captcha)
+├── Caso: Inyecciones de código detectadas (SQL, XSS)
+│   ├── Acción: Filtrar entrada y bloquear usuario
+│   └── Revisión: Notificar al equipo de seguridad y revisar logs
+└── Caso: Comportamiento anómalo en las páginas de usuario (phishing, XSS)
+    ├── Acción: Redirigir a página segura y notificar
+    └── Revisión: Analizar patrones de tráfico para detectar otros usuarios afectados
+
+Este árbol de decisión es una representación simplificada que muestra cómo el sistema podría tomar decisiones en función de distintos tipos de ataques detectados, con acciones y revisiones específicas para cada caso.
+
