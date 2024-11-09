@@ -1,6 +1,6 @@
 package clase10;
 
-public class DosReinasBacktracking {
+public class Actividad1 {
 
     static int N = 4;
 
