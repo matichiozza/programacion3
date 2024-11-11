@@ -1,4 +1,4 @@
-public class Ej1Backtracking {
+apublic class Ej1Backtracking {
     private static final int N = 4; // Tamaño del tablero 4x4
 
     public static void main(String[] args) {
